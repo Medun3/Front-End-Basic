@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm">
+        <label for="textBox">Enter Text:</label>
+        <input type="text" id="textBox" name="textBox">
+        <span id="errorMessage" class="error"></span><br><br>
+        <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            const textBox = document.getElementById('textBox');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            // Clear any previous error messages
+            errorMessage.textContent = '';
+
+            if (textBox.value.trim() === '') {
+                errorMessage.textContent = 'This field cannot be empty.';
+                return false;
+            }
+
+            alert('Form submitted successfully!');
+            // Add further form submission logic here if needed
+            return true;
+        }
+    </script>
+</body>
+</html>

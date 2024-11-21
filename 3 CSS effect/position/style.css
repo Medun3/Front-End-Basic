@@ -1,0 +1,57 @@
+/* Static Element */
+.static-element {
+    position: static; /* Default positioning */
+    background-color: lightblue;
+    padding: 10px;
+    margin: 20px;
+}
+
+/* Relative Element */
+.relative-element {
+    position: relative;
+    top: 20px; /* Moves 20px down */
+    left: 30px; /* Moves 30px right */
+    background-color: lightgreen;
+    padding: 10px;
+    margin: 20px;
+}
+
+/* Fixed Element */
+.fixed-element {
+    position: fixed;
+    top: 10px; /* Fixed 10px from the top of the viewport */
+    right: 10px; /* Fixed 10px from the right of the viewport */
+    background-color: lightcoral;
+    padding: 10px;
+}
+
+/* Absolute Element */
+.absolute-container {
+    position: relative; /* This is the reference point for the absolute element */
+    height: 200px;
+    background-color: lightyellow;
+    padding: 20px;
+    margin: 20px;
+}
+
+.absolute-element {
+    position: absolute;
+    top: 50px; /* 50px from the top of its relative container */
+    left: 100px; /* 100px from the left of its relative container */
+    background-color: lightpink;
+    padding: 10px;
+}
+
+/* Sticky Element */
+.sticky-element {
+    position: sticky;
+    top: 0; /* Sticks to the top of the viewport when scrolling */
+    background-color: lightseagreen;
+    padding: 10px;
+}
+
+/* Content to make scrolling */
+.content {
+    height: 1000px; /* Enough content to make the page scrollable */
+    padding: 20px;
+}

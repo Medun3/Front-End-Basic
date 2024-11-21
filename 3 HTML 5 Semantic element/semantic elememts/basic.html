@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantic HTML Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    main {
+      display: flex;
+      gap: 20px;
+    }
+    article, section {
+      flex: 1;
+    }
+    form {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Semantic HTML</h1>
+</header>
+
+<main>
+  <section>
+    <h2>Contact Us</h2>
+    <form action="/submit" method="post">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+      
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+      
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" required></textarea><br><br>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <article>
+    <h2>Latest News</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat vehicula nisi, vel scelerisque nulla ullamcorper eget. Curabitur vel velit eget erat vestibulum ultricies.</p>
+    <p>Proin euismod nisl nec nibh pharetra, id feugiat tortor auctor. Fusce placerat lorem at tellus dignissim, ac congue libero fermentum.</p>
+  </article>
+</main>
+
+<section>
+  <h2>Employee List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Position</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>John Doe</td>
+        <td>Developer</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jame</td>
+        <td>Designer</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Sam </td>
+        <td>Project Manager</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<footer>
+  <p>&copy; 2024 Medunraj</p>
+</footer>
+
+</body>
+</html>

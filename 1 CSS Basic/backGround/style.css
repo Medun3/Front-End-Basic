@@ -1,0 +1,12 @@
+
+body {
+    background-color: lightblue;
+
+    background-image: url('https://quickinsure.s3.ap-south-1.amazonaws.com/uploads/static_page/f5455805-ef01-4da4-8130-f6389be7c992/TOP-10-EXPENSIVE-CARS-IN-INDIA-2024.png'); 
+    background-attachment: fixed;
+
+    background-size: cover; 
+    background-position: center;
+
+    background-repeat: no-repeat;
+}

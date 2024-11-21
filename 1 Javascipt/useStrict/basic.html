@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Hoisting with Strict Mode</title>
+</head>
+<body>
+
+    <h1>Strict Mode: Variable Not Declared</h1>
+    
+    <script>
+        "use strict";  // Enable strict mode
+
+        console.log(myVar); // Error: myVar is not defined
+
+        var myVar = 150;
+        console.log(myVar); 
+    </script>
+    
+</body>
+</html>

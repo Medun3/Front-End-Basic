@@ -1,0 +1,37 @@
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            height: 100vh; /* 100% of the viewport height */
+            width: 100%; /* 100% of the viewport width */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .box-pixels {
+            height: 150px; /* Fixed height in pixels */
+            width: 200px; /* Fixed width in pixels */
+            background-color: #007bff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            margin-right: 20px;
+        }
+
+        .box-percentage {
+            height: 50%; /* Height as a percentage of the parent */
+            width: 40%; /* Width as a percentage of the parent */
+            background-color: #28a745;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+    

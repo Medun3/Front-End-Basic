@@ -1,0 +1,33 @@
+/* Pseudo-code */
+a:hover {
+    color: red;
+}
+
+a:active {
+    background-color: yellow; 
+}
+
+ul li:first-child {
+    font-weight: bold;
+}
+
+ul li:last-child {
+    color: green;
+}
+
+ul li:nth-child(even) {
+    background-color: #f0f0f0; 
+}
+
+/* Adding a pseudo-element before an element */
+p.highlight::before {
+    content: "Note: "; 
+    /* Adds text before the paragraph */
+    font-weight: bold;
+    color: blue;
+}
+
+ul li::after {
+    content: " (End)"; 
+    font-style: italic;
+}

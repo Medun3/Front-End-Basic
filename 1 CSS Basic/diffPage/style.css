@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.border-box {
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-top: 5px solid red;    
+    border-right: 8px dashed blue; 
+    border-bottom: 10px dotted green; 
+    border-left: 12px double orange; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Management</title>
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = `expires=${date.toUTCString()}`;
+            document.cookie = `${name}=${value}; ${expires}; path=/`;
+            alert(`Cookie "${name}" set successfully!`);
+        }
+
+        // Function to get a cookie by name
+        function getCookie(name) {
+            const nameEQ = `${name}=`;
+            const cookiesArray = document.cookie.split(';');
+            for (let i = 0; i < cookiesArray.length; i++) {
+                let cookie = cookiesArray[i].trim();
+                if (cookie.indexOf(nameEQ) === 0) {
+                    return cookie.substring(nameEQ.length, cookie.length);
+                }
+            }
+            return null;
+        }
+
+        // Function to check if a cookie exists
+        function checkCookie(name) {
+            const cookieValue = getCookie(name);
+            if (cookieValue) {
+                alert(`Cookie "${name}" exists with value: ${cookieValue}`);
+            } else {
+                alert(`Cookie "${name}" does not exist.`);
+            }
+        }
+
+        // Event listeners for buttons
+        function handleSetCookie() {
+            const name = document.getElementById('cookieName').value;
+            const value = document.getElementById('cookieValue').value;
+            const days = parseInt(document.getElementById('cookieDays').value) || 7;
+            setCookie(name, value, days);
+        }
+
+        function handleGetCookie() {
+            const name = document.getElementById('cookieName').value;
+            const value = getCookie(name);
+            alert(value ? `Cookie value: ${value}` : `Cookie "${name}" not found.`);
+        }
+
+        function handleCheckCookie() {
+            const name = document.getElementById('cookieName').value;
+            checkCookie(name);
+        }
+    </script>
+</head>
+<body>
+    <h1>Cookie Management</h1>
+    <label for="cookieName">Cookie Name:</label>
+    <input type="text" id="cookieName" placeholder="Enter cookie name" required><br><br>
+    <label for="cookieValue">Cookie Value:</label>
+    <input type="text" id="cookieValue" placeholder="Enter cookie value"><br><br>
+    <label for="cookieDays">Days to Expire:</label>
+    <input type="number" id="cookieDays" placeholder="Enter days (default: 7)"><br><br>
+    <button onclick="handleSetCookie()">Set Cookie</button>
+    <button onclick="handleGetCookie()">Get Cookie</button>
+    <button onclick="handleCheckCookie()">Check Cookie</button>
+</body>
+</html>

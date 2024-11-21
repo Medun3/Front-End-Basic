@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Layout Example</title>
+  <style>
+    /* General table styles */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    /* Fixed table layout */
+    .fixed-layout {
+      table-layout: fixed;
+    }
+    /* Default (auto/none) table layout */
+    .auto-layout {
+      table-layout: auto;
+    }
+    /* Highlight for the fixed table columns */
+    .fixed-layout td {
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+  <h2>Table with Fixed Layout</h2>
+  <table class="fixed-layout">
+    <thead>
+      <tr>
+        <th style="width: 30%;">Column 1</th>
+        <th style="width: 40%;">Column 2</th>
+        <th style="width: 30%;">Column 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Short text</td>
+        <td>Some longer text that will wrap because of the fixed layout</td>
+        <td>Another piece of text</td>
+      </tr>
+      <tr>
+        <td>This is some more text</td>
+        <td>Even longer text that will demonstrate how the fixed layout handles long content</td>
+        <td>Final text</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Table with Auto Layout</h2>
+  <table class="auto-layout">
+    <thead>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Short text</td>
+        <td>Some longer text that might stretch the column width</td>
+        <td>Another piece of text</td>
+      </tr>
+      <tr>
+        <td>This is some more text</td>
+        <td>Even longer text that will demonstrate how auto layout adjusts column width dynamically</td>
+        <td>Final text</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

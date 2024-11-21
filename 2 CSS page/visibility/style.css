@@ -1,0 +1,31 @@
+.hidden {
+    visibility: hidden;
+  }
+  
+  .visible {
+    visibility: visible;
+  }
+  
+  .collapse {
+    visibility: collapse;
+  }
+  .block {
+    display: block;
+  }
+  
+  .inline {
+    display: inline;
+  }
+  
+  .none {
+    display: none;
+  }
+  
+  .contents {
+    display: contents;
+  }
+  
+  .list-item {
+    display: list-item;
+  }
+    

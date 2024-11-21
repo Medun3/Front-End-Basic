@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Background Images</title>
+    <style>
+        /* Apply to the whole page */
+        body {
+            background-image: 
+                url('https://cdn.pixabay.com/photo/2022/09/27/19/46/ai-generated-7483596_960_720.jpg'),
+                url('https://universemagazine.com/wp-content/uploads/2022/08/zm4nfgq29yi91-1536x1536-1.jpg'),
+                url('https://tse4.mm.bing.net/th?id=OIP.0v0WSI9bszvLAmV1lus4-wHaDt&pid=Api&P=0&h=180');
+            background-position: top left, top right, bottom left;
+            background-size: 50% 50%, 25% 25%, 100% 100%;
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Apply to a specific element */
+        .element {
+            width: 300px;
+            height: 300px;
+            background-image: 
+                url('https://tse4.mm.bing.net/th?id=OIP.0v0WSI9bszvLAmV1lus4-wHaDt&pid=Api&P=0&h=180'),
+                url('https://universemagazine.com/wp-content/uploads/2022/08/zm4nfgq29yi91-1536x1536-1.jpg');
+            background-position: top left, bottom right;
+            background-size: 50% 50%, 30% 30%;
+            background-repeat: no-repeat, no-repeat;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="element">
+        This is an element with multiple backgrounds.
+    </div>
+</body>
+</html>

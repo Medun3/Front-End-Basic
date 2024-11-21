@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animation</title>
+  <style>
+    /* CSS Animation */
+    @keyframes boxAnimation {
+      0% {
+        background-color: red;
+        transform: translateX(0);
+        width: 100px;
+        height: 100px;
+      }
+      50% {
+        background-color: blue;
+        transform: translateX(200px);
+        width: 200px;
+        height: 200px;
+      }
+      100% {
+        background-color: green;
+        transform: translateX(400px);
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .animated-box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      animation-name: boxAnimation;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-delay: 1s;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="animated-box"></div>
+
+</body>
+</html>
